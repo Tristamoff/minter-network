@@ -1,0 +1,265 @@
+body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background: rgba(209, 247, 178, 0.1);
+}
+a{
+    color: #3a3a3a;
+}
+.login-div{
+    text-align:center;
+    margin-top:5px;
+}
+.login-form {
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    padding: 9px;
+}
+.login-form > * {
+    width: 100%;
+}
+#mnemonic {
+    width: calc(100% - 6px);
+    margin-bottom: 3px;
+}
+.for-authorized {
+    display: none;
+}
+
+.personal-data #username, .personal-data #logout {
+    display: inline-block;
+}
+.personal-data #username {
+    float: left;
+}
+.personal-data #logout {
+    float: right;
+    margin-bottom: 5px;
+}
+
+.personal-data {
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    padding: 8px 9px;
+}
+
+.write-tweet {
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    padding: 9px;
+    border-radius: 5px;
+}
+.write-tweet > * {
+    width: 100%;
+}
+.write-tweet #tweet-text {
+    width: calc(100% - 6px);
+    margin-bottom: 5px;
+}
+.write-tweet #tweet-button, .write-tweet #tweet-cancel {
+    padding: 1px 6px;
+    margin: 0 0 5px;
+    border-width: 2px;
+}
+.write-tweet #tweet-cancel {
+    margin-bottom: 0;
+}
+
+.for-anonymous button, .for-anonymous textarea{
+    margin: 0 auto;
+    display: block;
+}
+.container > div{
+    margin: 0 auto;
+    width: calc(100% - 20px);
+    max-width:400px;
+    min-width:320px;
+    background: #f5b98224;
+}
+.container > div.feeds{
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    padding: 4px 9px;
+    border-radius: 5px;
+}
+.container > div.personal-data{
+    margin: 0 auto 5px;
+}
+.container > div.write-tweet{
+    margin: 0px auto 5px;
+}
+.container > div.login-form{
+    margin: 0px auto 5px;
+}
+
+.container > div.direct-form{
+    margin: 0px auto 5px;
+}
+
+div.home{
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    padding: 8px 9px;
+    margin: 0 auto 5px;
+}
+div.home img {
+    width: 50px;
+}
+div.home a {
+    display: inline-block;
+    vertical-align: sub;
+}
+div.home .balance {
+    display: inline-block;
+    font-size: 85%;
+}
+div.red {
+    color: red;
+}
+
+.feeds {
+    margin: 0 auto;
+}
+.feeds .tweet{
+    border: 1px solid green;
+    border-radius: 5px;
+    margin: 5px auto;
+    display: block;
+    padding:5px 7px;
+}
+.userpic .name, .userpic .direct-link {
+    vertical-align: super;
+}
+.ava, .name, .direct-link{
+    display: inline-block;
+}
+.ava {
+    background-image: url("./img/default_avatart.png");
+    width: 30px;
+    height: 30px;
+    background-position: 50%;
+    background-size: contain;
+    margin-right: 5px;
+}
+.ava img {
+    max-width: 30px;
+    max-height: 30px;
+}
+.direct-link {
+    cursor: pointer;
+}
+.direct-link:hover {
+    text-decoration: underline;
+}
+.userpic .direct-link {
+    margin-left: 10px;
+}
+.tweet-body{
+    clear:both;
+    margin-top: 3px;
+    padding: 3px 0;
+}
+.tweet-bottom {
+    display: flow-root;
+}
+.tweet-bottom > div {
+    display:inline-block;
+}
+.tweet-bottom .links{
+    float:left;
+}
+.tweet-bottom .datetime{
+    float:right;
+    color:grey;
+}
+.tweet .links span {
+    cursor: pointer;
+    margin-right: 5px;
+}
+.tweet .links span:hover {
+    text-decoration: underline;
+}
+.tweet .links span.like-link:hover {
+    text-decoration: none;
+}
+.tweet .like-link {
+    background-image: url("./img/like_default.png");
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 22px;
+}
+.tweet span[data-liked="true"].like-link {
+    background-image: url("./img/like_active.png");
+}
+.tweet .like-link:hover, .tweet span[data-liked="true"].like-link:hover {
+    background-image: url("./img/like_hover.png");
+}
+
+.direct-form > * {
+    width: 100%;
+}
+
+.direct-form {
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    padding: 9px;
+    border-radius: 5px;
+    display: none;
+}
+
+.direct-form #direct-text {
+    width: calc(100% - 6px);
+}
+.direct-form #direct-button, .direct-form #direct-cancel {
+    padding: 1px 6px;
+    margin: 0px 0 5px;
+    border-width: 2px;
+}
+.direct {
+    border: 1px solid #008058;
+    border-radius: 5px;
+    margin: 5px auto;
+    display: block;
+    padding: 5px 7px;
+}
+#generated-private, #import-private {
+    width: calc(45% - 10px);
+}
+
+.load-replies {
+    background-color: rgba(1, 128, 0, 0.17);
+    border: 1px solid rgba(1, 128, 0, 0.17);
+    text-align: center;
+    padding: 3px 0;
+    cursor: pointer;
+}
+.load-replies:hover {
+    border: 1px solid rgba(1, 128, 0, 0.8);
+}
+.keys-status {
+    display: none;
+    padding: 5px 0 0;
+}
+.show-directs {
+    cursor: pointer;
+    display: inline;
+}
+.show-directs:hover {
+    text-decoration: underline;
+}
+#generate-private-key, #use-private-key {
+    width: 55%;
+    float: right;
+}
+#save_public_key, #load_private_key, #cancel_load_private_key {
+    width: 100%;
+    margin-top: 5px;
+}
+#import-private, #use-private-key, #cancel_load_private_key{
+    display: none;
+}
+div.clear {
+    clear: both;
+}
+.hide {
+    display: none;
+}

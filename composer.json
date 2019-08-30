@@ -1,0 +1,12 @@
+{
+    "name": "tristamoff/minter-network.ru",
+    "authors": [
+        {
+            "name": "tristamoff",
+            "email": "site.include@gmail.com"
+        }
+    ],
+    "require": {
+        "minter/minter-php-sdk": "^1.3"
+    }
+}

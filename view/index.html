@@ -1,0 +1,78 @@
+<?php ob_start(); ?>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Minter-network</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/theme/css/styles.css?a=15s22">
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        jsSettings = <?= $js_settings ?>
+    </script>
+    <script language="JavaScript" type="text/javascript" src="/theme/js/cryptico.js"></script>
+    <script src="/theme/js/main.js"></script>
+    <script src="https://unpkg.com/minterjs-util"></script>
+    <script src="https://unpkg.com/minterjs-wallet"></script>
+    <script src="https://unpkg.com/minter-js-sdk"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="home">
+            <a href="/"><img alt="Home" src="/theme/css/img/minter_logo.jpg" /></a>
+            <div class="balance"></div>
+        </div>
+        <div class="for-anonymous login-form">
+            <textarea class="form-control" id="mnemonic" placeholder="Ваша seed-фраза"></textarea>
+            <button type="button" class="btn btn-primary" id="auth-button">Вход</button>
+            <div id="auth_status"></div>
+        </div>
+        <div class="for-authorized personal-data">
+            <!--<div id="username"></div>-->
+            <button id="logout">Выйти</button>
+            <!--<div class="clear"></div>-->
+            <div class="keys-status">
+                <div class="clear"></div>
+                <input id="generated-private" type="text" />
+                <button id="generate-private-key">Сгенерировать приватный ключ</button>
+                <button id="save_public_key">Отправить публичный ключ в блокчейн</button>
+
+                <input id="import-private" type="text" />
+                <button id="use-private-key">Использовать приватный ключ</button>
+
+                <button id="load_private_key">У меня уже есть приватный ключ</button>
+                <button id="cancel_load_private_key">Отмена</button>
+                <div id="key_status"></div>
+            </div>
+            <div id="direct_data">
+                <div class="show-directs">Открыть директ</div>
+                <div class="direct_list"></div>
+            </div>
+        </div>
+        <div class="for-authorized write-tweet">
+            <div id="reply-info"></div>
+            <textarea placeholder="Текст сообщения" id="tweet-text" data-type="tweet"></textarea>
+            <div id="tweet-tx-length"></div>
+            <div id="tweet-tx-fee"></div>
+            <button id="tweet-button">Tweet</button>
+            <button id="tweet-cancel">Отмена</button>
+            <div id="tweet_status"></div>
+        </div>
+        <div class="direct-form">
+            <div id="direct-info"></div>
+            <textarea placeholder="Текст личного сообщения" id="direct-text" data-type="direct"></textarea>
+            <div id="direct-tx-length"></div>
+            <div id="direct-tx-fee"></div>
+            <button id="direct-button">Direct</button>
+            <button id="direct-cancel">Отмена/Закрыть</button>
+            <div id="direct_status"></div>
+        </div>
+        <div class="feeds">
+        </div>
+    </div>
+</body>
+</html>
+<?php ob_end_flush(); ?>
